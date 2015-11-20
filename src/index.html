@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Dat Mouse</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <label for="file">Choisissez un Terrain</label>
+    <br>
+    <input type="file" id="file" value="text"/>
+
+    <canvas id="canvas">Votre navigateur ne supporte pas HTML5</canvas>
+
+    <br>
+
+    <form role="form">
+        <div class="form-group">
+            <div class="col-xs-2">
+                <label for="file">Porte 1</label>
+                <input class="form-control" id="door1" type="number">
+            </div>
+            <div class="col-xs-3">
+                <label for="file">Porte 2</label>
+                <input class="form-control" id="door2" type="number">
+            </div>
+            <div class="col-xs-4">
+                <label for="file">Vitesse(ms)</label>
+                <input class="form-control" id="speed" type="number">
+            </div>
+
+            <div class="col-xs-5">
+
+                <button type="button" class="btn btn-danger" onclick="launch()" >Lancer</button>
+            </div>
+        </div>
+    </form>
+
+
+    <br>
+    <span class="bold">Tour:</span><span id="tour"></span>
+    <span class="bold">Déplacements:</span><span id="deplacements"></span>
+    <span class="bold">Souris sur le terrain:</span><span id="sourisTerrain"></span>
+    <span class="bold">Souris arrivées:</span><span id="sourisArrivee"></span>
+</body>
+
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="js/classes/canvas/Tileset.js"></script>
+<script type="text/javascript" src="js/classes/astar/Astar.js"></script>
+<script type="text/javascript" src="js/classes/elements/Door.js"></script>
+<script type="text/javascript" src="js/classes/elements/Mouse.js"></script>
+<script type="text/javascript" src="js/classes/elements/Position.js"></script>
+<script type="text/javascript" src="js/classes/elements/Cheese.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</html>
